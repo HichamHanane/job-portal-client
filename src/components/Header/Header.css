@@ -1,0 +1,61 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+.header-logo {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo-jf {
+    color: #3f51b5;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(to right, #ff9944, #ff6b33);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 107, 51, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(255, 107, 51, 0.6);
+    opacity: 1;
+}
+
+
+
+.btn-login {
+    background: none;
+    color: #3f51b5;
+    border: 2px solid #3f51b5;
+    box-shadow: none;
+}
+
+.btn-login:hover {
+    background: #e0e7ff;
+    transform: none;
+    box-shadow: none;
+}
+

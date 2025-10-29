@@ -1,0 +1,161 @@
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+    padding: 20px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.register-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3f51b5;
+}
+
+.input-error {
+    border-color: #e53935 !important;
+}
+
+.error-message {
+    font-size: 12px;
+    color: #e53935;
+    margin-top: 5px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.form-group-role {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.role-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.role-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #3f51b5;
+}
+
+.error-message-role {
+    margin-top: 10px;
+}
+
+
+.btn-register-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(to right, #ff9944, #ff6b33);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 107, 51, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-register-submit:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(255, 107, 51, 0.4);
+}
+
+.btn-register-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+.register-footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer-link {
+    color: #3f51b5;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

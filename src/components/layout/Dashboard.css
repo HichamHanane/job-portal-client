@@ -1,0 +1,203 @@
+/* Dashboard.css */
+
+/* --- Layout Structure --- */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    /* Full height of the viewport */
+    background-color: #f7f9fc;
+    /* Light background for the overall page */
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+    width: 280px;
+    /* Fixed width as seen in the image */
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    /* Soft shadow on the side */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: fixed;
+    /* Fixed position on desktop */
+    height: 100vh;
+    z-index: 20;
+}
+
+.sidebar-top {
+    /* Contains logo and navigation */
+    padding: 0 20px;
+}
+
+.sidebar-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3f51b5;
+    /* Primary Blue Accent */
+    text-decoration: none;
+    padding: 10px 0 30px 0;
+    display: block;
+}
+
+/* --- Navigation Links --- */
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    /* Rounded corners for links */
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.nav-item-link .nav-icon {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #aab2bb;
+    /* Muted icon color */
+}
+
+/* Style pour le lien non actif au survol */
+.nav-item-link:hover {
+    background-color: #f0f4ff;
+    /* Light blue background on hover */
+    color: #3f51b5;
+}
+
+/* Style pour le lien actif (correspondant à l'image) */
+.nav-item-link.active {
+    background-color: #f0f4ff;
+    /* Light blue background */
+    color: #3f51b5;
+    /* Blue text */
+    font-weight: 600;
+}
+
+.nav-item-link.active .nav-icon {
+    color: #3f51b5;
+    /* Blue icon */
+}
+
+/* --- Logout Button --- */
+.sidebar-bottom {
+    padding: 0 20px;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+
+    background: linear-gradient(to right, #ff9944, #ff6b33);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 107, 51, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(255, 107, 51, 0.6);
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    margin-left: 280px;
+    /* Space for the fixed sidebar */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header for Main Content --- */
+.content-header {
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: flex-end;
+    /* Push content to the right */
+    align-items: center;
+    position: sticky;
+    /* Sticky header for scrolling content */
+    top: 0;
+    z-index: 10;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3f51b5;
+    /* Blue border accent */
+}
+
+/* --- Responsive Adjustments (Mobile/Tablet) --- */
+@media (max-width: 992px) {
+    .sidebar {
+        /* Hide sidebar off-screen on smaller devices */
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        position: fixed;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        /* Slide in when open */
+    }
+
+    .main-content {
+        /* Full width when sidebar is hidden */
+        margin-left: 0;
+    }
+
+    .content-header {
+        justify-content: space-between;
+        /* Add space for the hamburger menu */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger menu button */
+    }
+}
+
+/* Ensure hamburger is hidden on desktop */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3f51b5;
+}
+
+/* --- Page Content Styling --- */
+.page-content-wrapper {
+    padding: 30px 40px;
+}
