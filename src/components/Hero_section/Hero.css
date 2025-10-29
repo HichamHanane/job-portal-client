@@ -72,3 +72,42 @@
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
     padding: 20px;
 }
+
+/* --- Responsive Adjustments --- */
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .hero-left {
+        order: 2;
+        /* Text appears below animation on mobile */
+    }
+
+    .hero-right {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .hero-headline {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 100%;
+        /* Allow description to take full width */
+    }
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 576px) {
+    .hero-headline {
+        font-size: 28px;
+    }
+}
